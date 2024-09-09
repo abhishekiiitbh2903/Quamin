@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Connection to DPS</title>
+    <style>
+        .sensor-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .sensor {
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Sensor Connection to Azure DPS</h1>
+    <div class="sensor-container">
+        <div class="sensor">
+            <form method="POST" action="/start">
+                <input type="hidden" name="sensor" value="moistureSensorxyz">
+                <button type="submit">Start Sensor 1</button>
+            </form>
+        </div>
+        <div class="sensor">
+            <form method="POST" action="/start">
+                <input type="hidden" name="sensor" value="moistureSensor2">
+                <button type="submit">Start Sensor 2</button>
+            </form>
+        </div>
+        <div class="sensor">
+            <form method="POST" action="/start">
+                <input type="hidden" name="sensor" value="moistureSensor3">
+                <button type="submit">Start Sensor 3</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
